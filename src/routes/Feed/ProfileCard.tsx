@@ -1,8 +1,9 @@
 import styled from "@emotion/styled"
-import Image from "next/image"
 import React from "react"
 import { CONFIG } from "site.config"
 import { Emoji } from "src/components/Emoji"
+import Lottie from "react-lottie-player";
+import UserLottieFile from 'public/lotties/user1.json';
 
 type Props = {}
 
@@ -14,7 +15,12 @@ const ProfileCard: React.FC<Props> = () => {
       </div>
       <div className="content">
         <div className="top">
-          <Image src={CONFIG.profile.image} fill alt="" />
+          <Lottie
+            loop
+            animationData={UserLottieFile}
+            play
+
+          />
         </div>
         <div className="mid">
           <div className=" name">{CONFIG.profile.name}</div>
@@ -51,7 +57,7 @@ const StyledWrapper = styled.div`
       &:after {
         content: "";
         display: block;
-        padding-bottom: 100%;
+        //padding-bottom: 100%;
       }
     }
     .mid {
