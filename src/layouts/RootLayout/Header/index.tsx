@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
 export default Header
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.header`
   z-index: ${zIndexes.header};
   position: sticky;
   top: 0;
