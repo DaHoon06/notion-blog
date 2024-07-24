@@ -2,6 +2,8 @@ import { CONFIG } from "site.config"
 import Image from "next/image"
 import React from "react"
 import styled from "@emotion/styled"
+import UserLottieFile from 'public/lotties/avatar.json';
+import Lottie from "react-lottie-player";
 
 type Props = {
   className?: string
@@ -13,13 +15,22 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
-          <Image
-            src={CONFIG.profile.image}
-            width={90}
-            height={90}
-            css={{ position: "relative" }}
-            alt="profile_image"
-          />
+          <div className={'avatar'}>
+            <Lottie
+              loop
+              animationData={UserLottieFile}
+              play
+
+            />
+          </div>
+
+          {/*<Image*/}
+          {/*  src={CONFIG.profile.image}*/}
+          {/*  width={90}*/}
+          {/*  height={90}*/}
+          {/*  css={{ position: "relative" }}*/}
+          {/*  alt="profile_image"*/}
+          {/*/>*/}
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
             <div className="mid">{CONFIG.profile.role}</div>
@@ -35,6 +46,11 @@ export default MobileProfileCard
 
 const StyledWrapper = styled.div`
   display: block;
+  
+  .avatar {
+    width: 8em;
+    height: auto;
+  }
 
   @media (min-width: 1024px) {
     display: none;
@@ -52,7 +68,8 @@ const StyledWrapper = styled.div`
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     > .wrapper {
       display: flex;
-      gap: 0.5rem;
+      gap: 1.25rem;
+      padding: 1em 0.5em;
       align-items: center;
       > .wrapper {
         height: fit-content;

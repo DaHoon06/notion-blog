@@ -12,14 +12,17 @@ const CONFIG = {
   },
   projects: [
     {
+      icon: '/img/unisurvey_logo.jpeg',
       name: `유니서베이`,
       href: "https://unisurvey.co.kr/landing",
     },
     {
+      icon: '',
       name: `패널허브`,
       href: "https://v3.panel-hub.io/",
     },
     {
+      icon: '',
       name: `비즈챗`,
       href: "https://pmi.targeting.services/",
     },
