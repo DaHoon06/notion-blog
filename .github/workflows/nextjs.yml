@@ -75,11 +75,11 @@ jobs:
       # Inject the environment variables from GitHub Secrets here
       - name: Set up environment variables
         run: |
-          echo "NOTION_PAGE_ID=${{ secrets.NOTION_PAGE_ID }}" >> $GITHUB_ENV
-          echo "VERSION_ID=${{ secrets.VERSION_ID }}" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID }}" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_UTTERANCES_REPO=${{ secrets.NEXT_PUBLIC_UTTERANCES_REPO }}" >> $GITHUB_ENV
+          echo "NOTION_PAGE_ID=${{ secrets.NOTION_PAGE_ID }}" >> .env
+          echo "VERSION_ID=${{ secrets.VERSION_ID }}" >> .env
+          echo "NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID }}" >> .env
+          echo "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}" >> .env
+          echo "NEXT_PUBLIC_UTTERANCES_REPO=${{ secrets.NEXT_PUBLIC_UTTERANCES_REPO }}" >> .env
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
