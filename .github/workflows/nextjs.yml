@@ -71,6 +71,16 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+
+      # Inject the environment variables from GitHub Secrets here
+      - name: Set up environment variables
+        run: |
+          echo "NOTION_PAGE_ID=${{ secrets.NOTION_PAGE_ID }}" >> $GITHUB_ENV
+          echo "VERSION_ID=${{ secrets.VERSION_ID }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_UTTERANCES_REPO=${{ secrets.NEXT_PUBLIC_UTTERANCES_REPO }}" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
