@@ -11,7 +11,11 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preexport": "rimraf out",
+    "export": "next export",
+    "touch": "touch out/.nojekyll",
+    "posttouch": "touch out/_next/.nojekyll"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

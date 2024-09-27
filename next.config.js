@@ -3,8 +3,10 @@ const prefix =
 
 module.exports = {
   output: 'export',
+  basePath: '/notion-blog',
   images: {
     domains: ['www.notion.so', 'lh5.googleusercontent.com', 's3-us-west-2.amazonaws.com'],
   },
   assetPrefix: prefix,
+  trailingSlash: true,
 }

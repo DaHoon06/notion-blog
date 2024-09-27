@@ -17,7 +17,7 @@ const filter: FilterPostsOptions = {
   acceptType: ["Paper", "Post", "Page"],
 }
 
-export const generateStaticParams = async () => {
+export const getStaticPaths = async () => {
   const posts = await getPosts()
   const filteredPost = filterPosts(posts, filter)
 
