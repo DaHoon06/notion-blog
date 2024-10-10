@@ -1,15 +1,9 @@
-@font-face {
-    font-family: 'omyu_pretty';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+@import "font.css";
 
 * {
-    font-family: 'omyu_pretty', '__pretendard_6bb8e5', '__pretendard_Fallback_6bb8e5';
-    font-size: 18px;
+    font-family: "TmoneyRoundWind", 'omyu_pretty', '__pretendard_6bb8e5', '__pretendard_Fallback_6bb8e5';
 }
 
 .notion-text {
-    font-family: 'omyu_pretty', '__pretendard_6bb8e5', '__pretendard_Fallback_6bb8e5';
+    font-family: "TmoneyRoundWind", 'omyu_pretty', '__pretendard_6bb8e5', '__pretendard_Fallback_6bb8e5';
 }
