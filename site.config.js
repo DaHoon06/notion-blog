@@ -1,10 +1,10 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "Hoody",
+    name: "Dahoon06",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "FullStack Developer",
-    bio: "Next.js Vue.js NestJS",
+    bio: "Next.js React Vue.js NestJS MongoDB Node.js",
     email: "dahoon226@gmail.com",
     linkedin: "다훈-전-702984242",
     github: "dahoon06",
@@ -29,7 +29,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "Dahoon06 store",
+    title: "Dahoon06 개발 블로그",
     description: "welcome to dahoon06 Store!",
     scheme: "dark", // 'light' | 'dark' | 'system'
   },

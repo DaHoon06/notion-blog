@@ -3,6 +3,7 @@ import ThemeToggle from "./ThemeToggle"
 import styled from "@emotion/styled"
 import { zIndexes } from "src/styles/zIndexes"
 import { Logo } from "../../../components/Logo";
+import Link from "next/link";
 
 type Props = {
   fullWidth: boolean
@@ -12,7 +13,9 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <StyledWrapper>
       <div data-full-width={fullWidth} className="container">
-        <Logo />
+        <Link href={'/'}>
+          <Logo />
+        </Link>
         <div className="nav">
           <ThemeToggle />
           <NavBar />
@@ -30,7 +33,11 @@ const StyledWrapper = styled.header`
   top: 0;
   background-color: ${({ theme }) => theme.colors.gray2};
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
   .container {
     display: flex;
     padding-left: 1rem;
@@ -39,7 +46,7 @@ const StyledWrapper = styled.header`
     align-items: center;
     width: 100%;
     max-width: 1120px;
-    height: 3rem;
+    height: 100%;
     margin: 0 auto;
     &[data-full-width="true"] {
       @media (min-width: 768px) {
